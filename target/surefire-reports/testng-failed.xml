@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [FiniteBankingV1]">
+  <listeners>
+    <listener class-name="com.finitebanking.utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="BankingApp Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.finitebanking.testcases.LoginTest_001">
+        <methods>
+          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.finitebanking.testcases.LoginTest_001 -->
+      <class name="com.finitebanking.testcases.TC_AddCustomerTest_003">
+        <methods>
+          <include name="addNewCustomer"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.finitebanking.testcases.TC_AddCustomerTest_003 -->
+      <class name="com.finitebanking.testcases.TC_LoginDDT_002">
+        <methods>
+          <include name="loginDDT" invocation-numbers="0 1 2 3 4"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.finitebanking.testcases.TC_LoginDDT_002 -->
+    </classes>
+  </test> <!-- BankingApp Test(failed) -->
+</suite> <!-- Failed suite [FiniteBankingV1] -->
